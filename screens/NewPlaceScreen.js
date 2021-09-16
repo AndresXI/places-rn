@@ -10,6 +10,12 @@ const NewPlaceScreen = (props) => {
   )
 }
 
+NewPlaceScreen.navigationOptions = (navDate) => {
+  return {
+    headerTitle: 'Add a New Place',
+  }
+}
+
 const styles = StyleSheet.create({})
 
 export default NewPlaceScreen
