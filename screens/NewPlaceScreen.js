@@ -7,16 +7,23 @@ import {
   StyleSheet,
   TextInput,
 } from 'react-native'
+import { useDispatch } from 'react-redux'
+
 import Colors from '../constants/Colors'
+import * as placesActions from '../store/places-actions'
 
 const NewPlaceScreen = (props) => {
   const [title, setTitle] = useState('')
+  const dispatch = useDispatch()
 
   const titleChangeHandler = (text) => {
     setTitle(text)
   }
 
-  const savePlaceHandler = () => {}
+  const savePlaceHandler = () => {
+    dispatch(placesActions.addPlace(title))
+    props.navigation.goBack()
+  }
 
   return (
     <ScrollView>
