@@ -3,7 +3,7 @@ class Place {
     this.id = id
     this.title = title
     this.imageUri = imageUri
-    this.id.address = address
+    this.address = address
     this.lat = lat
     this.lng = lng
   }
