@@ -32,7 +32,6 @@ export const addPlace = (title, image, location) => {
         location.lat,
         location.lng
       )
-      console.log('db ressult ------', dbResult)
       dispatch({
         type: ADD_PLACE,
         placeData: {
